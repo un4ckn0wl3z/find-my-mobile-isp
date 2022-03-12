@@ -15,11 +15,8 @@ func main() {
 	}
 
 	number := os.Args[1]
-
 	fmt.Println("Target number:", number)
-
 	service := service.GetIsp(number)
-
 	fmt.Println("Target service:", service)
 
 }
