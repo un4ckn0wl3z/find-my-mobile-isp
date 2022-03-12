@@ -10,6 +10,10 @@ type client struct {
 	c *resty.Client
 }
 
+func newService() *client {
+	return &client{c: resty.New()}
+}
+
 // ยังไม่ได้เทสเพราะไม่มีเบอร์ DTAC *-*
 func (c *client) isDTAC(number string) bool {
 	resp, err := c.c.R().
@@ -54,10 +58,6 @@ func (c *client) isTRUE(number string) bool {
 		return true
 	}
 	return false
-}
-
-func newService() *client {
-	return &client{c: resty.New()}
 }
 
 func (c *client) isAIS(number string) bool {
