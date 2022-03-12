@@ -82,7 +82,7 @@ func (c *client) isAIS(number string) bool {
 
 }
 
-func GetIsp(number string) (service string) {
+func GetIsp(number string) string {
 
 	client := newService()
 
