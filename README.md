@@ -1,4 +1,4 @@
-# what-is-my-isp
+# find-my-mobile-isp
 ### Find mobile number's ISP (Thailand only.)
 ![plot](./img/example.png)
 <hr />
