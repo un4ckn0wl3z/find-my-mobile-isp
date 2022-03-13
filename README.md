@@ -1,6 +1,6 @@
-﻿# what-is-my-isp
-
+# what-is-my-isp
+### Find mobile number's ISP (Thailand only.)
 ![plot](./img/example.png)
+<hr />
 
-Find mobile number's ISP (Thailand only.)
-Usage: what-is-my-isp.exe <phone number>
+<b>Usage: what-is-my-isp.exe &lt;phone number&gt;</b>
