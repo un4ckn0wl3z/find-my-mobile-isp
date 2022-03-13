@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/un4ckn0wl3z/what-is-my-isp/service"
+	"github.com/un4ckn0wl3z/find-my-mobile-isp/service"
 )
 
 func main() {

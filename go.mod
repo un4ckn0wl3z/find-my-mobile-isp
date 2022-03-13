@@ -1,4 +1,4 @@
-module github.com/un4ckn0wl3z/what-is-my-isp
+module github.com/un4ckn0wl3z/find-my-mobile-isp
 
 go 1.17
 

@@ -3,4 +3,4 @@
 ![plot](./img/example.png)
 <hr />
 
-<b>Usage: what-is-my-isp.exe &lt;phone number&gt;</b>
+<b>Usage: find-my-mobile-isp.exe &lt;phone number&gt;</b>
