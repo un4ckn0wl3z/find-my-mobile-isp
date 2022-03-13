@@ -3,6 +3,7 @@ package service
 import (
 	b64 "encoding/base64"
 
+	"github.com/fatih/color"
 	"github.com/go-resty/resty/v2"
 )
 
@@ -14,7 +15,6 @@ func newService() *client {
 	return &client{c: resty.New()}
 }
 
-// ยังไม่ได้เทสเพราะไม่มีเบอร์ DTAC *-*
 func (c *client) isDTAC(number string) bool {
 	resp, err := c.c.R().
 		EnableTrace().
@@ -82,17 +82,17 @@ func (c *client) isAIS(number string) bool {
 
 }
 
-func GetIsp(number string) string {
+func GetISP(number string) (string, *color.Color) {
 
 	client := newService()
 
 	if client.isAIS(number) {
-		return "AIS"
+		return "AIS", color.New(color.FgGreen)
 	} else if client.isTRUE(number) {
-		return "TRUE"
+		return "TRUE", color.New(color.FgRed)
 	} else if client.isDTAC(number) {
-		return "DTAC"
+		return "DTAC", color.New(color.FgBlue)
 	} else {
-		return "UNKNOWN SERVICE"
+		return "UNKNOWN SERVICE", color.New(color.FgYellow)
 	}
 }
